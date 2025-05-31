@@ -39,7 +39,7 @@ for page in results["results"]:
         notion.pages.update(page_id=page["id"], properties={
             VIEWS_PROP: {"number": views}
         })
-    print(f"🎵 {props.get('曲名', {}).get('title', [{}])[0].get('plain_text', 'Untitled')}")
-    print(f"🔗 URL: {props[URL_PROP]['url']}")
-    print(f"📺 Video ID: {video_id}")
-    print(f"👀 Views: {views}")
+    print(f"{props.get('曲名', {}).get('title', [{}])[0].get('plain_text', 'Untitled')}")
+    print(f"URL: {props[URL_PROP]['url']}")
+    print(f"Video ID: {video_id}")
+    print(f"Views: {views}")
