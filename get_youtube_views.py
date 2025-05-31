@@ -2,7 +2,7 @@ import os, json, requests
 from notion_client import Client
 from urllib.parse import urlparse, parse_qs
 
-NOTION_TOKEN = os.environ["NOTION_TOKEN"]
+NOTION_TOKEN = os.environ["NOTION_API_KEY"]
 DATABASE_ID = os.environ["NOTION_DATABASE_ID"]
 YOUTUBE_API_KEY = os.environ["YOUTUBE_API_KEY"]
 
