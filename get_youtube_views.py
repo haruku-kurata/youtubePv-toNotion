@@ -24,7 +24,7 @@ def extract_video_id(url):
 def get_view_count(video_id):
     api = f"https://www.googleapis.com/youtube/v3/videos?part=statistics&id={video_id}&key={YOUTUBE_API_KEY}"
     r = requests.get(api).json()
-    print(f"🔁 API Response for {video_id}: {json.dumps(r, indent=2)}")
+    print("🔐 YouTube API Key Loaded:", YOUTUBE_API_KEY[:6], "...")
     return int(r["items"][0]["statistics"]["viewCount"]) if "items" in r and r["items"] else None
 
 results = notion.databases.query(database_id=DATABASE_ID)
